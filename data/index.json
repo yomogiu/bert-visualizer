@@ -1,0 +1,19 @@
+{
+  "samples": [
+    {
+      "id": 1,
+      "text": "The cat sat on the mat.",
+      "file": "sample_1.json"
+    },
+    {
+      "id": 2,
+      "text": "John told Mike that he passed the exam.",
+      "file": "sample_2.json"
+    },
+    {
+      "id": 3,
+      "text": "Paris is the capital of France.",
+      "file": "sample_3.json"
+    }
+  ]
+}

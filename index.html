@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DistilBERT Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <h1>DistilBERT Transformer Visualization</h1>
+        <div id="instructions">Use mouse to rotate, zoom with scroll wheel</div>
+    </div>
+
+    <canvas id="visualizer"></canvas>
+    
+    <div id="controls">
+        <h3>Visualization Controls</h3>
+        
+        <label for="sampleSelect">Sample Text:</label>
+        <select id="sampleSelect">
+            <option value="1">The cat sat on the mat.</option>
+            <option value="2">John told Mike that he passed the exam.</option>
+            <option value="3">Paris is the capital of France.</option>
+        </select>
+        
+        <div class="control-group">
+            <label for="layerSlider">Focus Layer:</label>
+            <input type="range" id="layerSlider" min="0" max="5" value="0">
+            <span class="control-value">Layer 1</span>
+        </div>
+        
+        <div class="control-group">
+            <label for="headMenu">Attention Head:</label>
+            <select id="headMenu">
+                <option value="all">All Heads</option>
+                <option value="0">Head 1</option>
+                <option value="1">Head 2</option>
+                <option value="2">Head 3</option>
+                <option value="3">Head 4</option>
+            </select>
+        </div>
+        
+        <div id="legend">
+            <h4>Legend</h4>
+            <div class="legend-item"><span class="legend-color" style="background:#666;"></span> Model layers</div>
+            <div class="legend-item"><span class="legend-color" style="background:#0088ff;"></span> Attention heads</div>
+            <div class="legend-item"><span class="legend-color" style="background:#ff0000;"></span> Focused attention</div>
+            <div class="legend-item"><span class="legend-color" style="background:linear-gradient(90deg, blue, red);"></span> Attention weights</div>
+        </div>
+    </div>
+    
+    <div id="token-info"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
